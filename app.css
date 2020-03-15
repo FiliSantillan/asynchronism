@@ -20,6 +20,11 @@ p:last-child {
   margin: 0;
 }
 
+a {
+  color: white;
+  margin-right: 0.5rem;
+}
+
 .header {
   background: url(cover.png) no-repeat bottom;
   background-size: cover;
