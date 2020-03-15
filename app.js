@@ -1,64 +1,41 @@
 import { fetchDataCallback } from "./fetchDataCallback.js";
 import { fetchData } from "./fetchData.js";
+import { buildCard } from "./buildCard.js";
 
 const API = "https://rickandmortyapi.com/api/character",
-      callbackContainer = document.getElementById("callback-container"),
-      promiseContainer = document.getElementById("promise-container"),
-      asyncContainer = document.getElementById("async-container");
+  callbackContainer = document.getElementById("callback-container"),
+  promiseContainer = document.getElementById("promise-container"),
+  asyncContainer = document.getElementById("async-container");
 
+// Callbacks
 fetchDataCallback(API, (error, data) => {
   if (error) return error;
 
   data.results.map(character => {
-    const card = document.createElement("article");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <strong class="status">${character.status}</strong>
-      <img src="${character.image}" alt="${character.name}">
-      <h2>${character.name}</h2>
-      <span>${character.species}</span>
-    `;
-
+    const card = buildCard(character);
     callbackContainer.appendChild(card);
   });
+
 });
 
+// Promises
 fetchData(`${API}?page=2`)
   .then(data => {
     data.results.map(character => {
-      const card = document.createElement("article");
-      card.classList.add("card");
-
-      card.innerHTML = `
-      <strong class="status">${character.status}</strong>
-      <img src="${character.image}" alt="${character.name}">
-      <h2>${character.name}</h2>
-      <span>${character.species}</span>
-    `;
-
+      const card = buildCard(character);
       promiseContainer.appendChild(card);
     });
   })
-  .catch((error) => {
+  .catch(error => {
     return error;
   });
 
-const fetchDataAsync = async (url_api) => {
+// Async / Await
+(async function fetchDataAsync() {
   const data = await fetchData(`${API}?page=3`);
+
   data.results.map(character => {
-    const card = document.createElement("article");
-    card.classList.add("card");
-
-    card.innerHTML = `
-      <strong class="status">${character.status}</strong>
-      <img src="${character.image}" alt="${character.name}">
-      <h2>${character.name}</h2>
-      <span>${character.species}</span>
-    `;
-
+    const card = buildCard(character);
     asyncContainer.appendChild(card);
   });
-}
-
-fetchDataAsync();
+})();

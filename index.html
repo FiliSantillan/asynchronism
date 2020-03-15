@@ -14,18 +14,25 @@
     <header class="header">
       <div class="header-wrapper">
         <h1 class="title">Rick & Morty API</h1>
-        <p>
-          JS es un lenguaje de programación asíncrono y no bloqueante con un manejador de eventos mejor conocido como el Event Loop, implementado en un único hilo para sus interfaces de entrada y salida. El asincronismo en simples palabras es la acción que no ocurre al mismo tiempo.
-        </p>
         <p>En este pequeño ejercicio se consume la API de Rick & Morty, de tres distintas maneras: Callbacks, Promises y Async / Await.</p>
+        <p>Los primeros 20 personajes se traen mediante Callbacks, los 20 siguientes mediante promesas y los últimos 20 mediante Async / Await.</p>
       </div>
     </header>
 
-    <section id="callback-container" class="container"></section>
+    <section class="container-wrapper">
+      <h2>Callbacks</h2>
+      <div id="callback-container" class="container container--callback"></div>
+    </section>
 
-    <section id="promise-container" class="container"></section>
+    <section class="container-wrapper">
+      <h2>Promises</h2>
+      <div id="promise-container" class="container container--promises"></div>
+    </section>
 
-    <section id="async-container" class="container"></section>
+    <section class="container-wrapper">
+      <h2>Async / Await</h2>
+      <div id="async-container" class="container container--async"></div>
+    </section>
 
     <script src="app.js" type="module" defer></script>
   </body>
