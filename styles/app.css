@@ -26,7 +26,7 @@ a {
 }
 
 .header {
-  background: url(cover.png) no-repeat bottom;
+  background: url(../assets/cover.png) no-repeat bottom;
   background-size: cover;
   padding: 1.5rem;
   color: white;
