@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="/">
+  <a href="https://github.com/FiliSantillan/asynchronism">
     <img src="assets/logo.png" alt="Logo">
   </a>
 
@@ -11,9 +11,9 @@
     Consuming an API with Callbacks, Fetch and Async Await.
     <br />
     <br />
-    <a href="https://filisantillan.github.io/asynchronism/" target="_blank" rel="noopener">View Demo</a>
+    <a href="https://filisantillan.github.io/asynchronism/" target="_blank" rel="noopener">VIEW DEMO</a>
     ·
-    <a href="https://github.com/FiliSantillan/asynchronism/issues">Report Bug</a>
+    <a href="https://github.com/FiliSantillan/asynchronism/issues">REPORT BUG</a>
   </p>
 </p>
 
